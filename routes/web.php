@@ -21,7 +21,9 @@ Auth::routes();
  * @middleware auth
  * @desc 后台相关接口
  */
-Route::group(['namespace'=>'Admin','prefix'=>'m','middleware'=>'auth'],function (){
+Route::group(['namespace'=>'Admin','middleware'=>'auth'],function (){
+
+    Route::get('/index','HomeController@index');
 
     //系统设置
     Route::post('/setting','SettingController@update');
@@ -32,6 +34,8 @@ Route::group(['namespace'=>'Admin','prefix'=>'m','middleware'=>'auth'],function 
     Route::post('/user','UserController@create');
     Route::put('/user/{id}','UserController@edit');
     Route::delete('/user/{id}','UserController@delete');
+
+
 });
 
 
@@ -41,3 +45,4 @@ Route::post('/article','Admin\ArticleController@store')->name('article.store');
 Route::get('/article/{id}/edit','Admin\ArticleController@edit')->name('article.edit');
 Route::post('/article/{id}','Admin\ArticleController@update')->name('article.update');
 
+//Route::get('/test','Auth\LoginController');

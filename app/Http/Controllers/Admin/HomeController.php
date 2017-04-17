@@ -8,8 +8,7 @@ use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
     public function index(){
-//        echo 1;die();
-        return view('home.index');
+        return view('admin.home');
     }
 
 
