@@ -23,17 +23,21 @@ Auth::routes();
  */
 Route::group(['namespace'=>'Admin','prefix'=>'m','middleware'=>'auth'],function (){
 
-    Route::get('/index','HomeController@index');//首页
+    //系统设置
+    Route::post('/setting','SettingController@update');
+    Route::get('/setting','SettingController@index');
+
+    //用户
     Route::get('/users','UserController@index');
-    Route::get('/articles','ArticleController@list');
-    Route::get('/article/{id}','ArticleController@show');
-    Route::post('/article','ArticleController@create');
-    Route::put('/article/{id}','ArticleController@update');
+    Route::post('/user','UserController@create');
+    Route::put('/user/{id}','UserController@edit');
+    Route::delete('/user/{id}','UserController@delete');
 });
 
-//首页
-Route::get('/','HomeController@index');
-Route::get('/test','HomeController@test');
 
+//文章接口
+Route::get('/article/create','Admin\ArticleController@create')->name('article.create');
+Route::post('/article','Admin\ArticleController@store')->name('article.store');
+Route::get('/article/{id}/edit','Admin\ArticleController@edit')->name('article.edit');
+Route::post('/article/{id}','Admin\ArticleController@update')->name('article.update');
 
-//Route::group();
