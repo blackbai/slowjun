@@ -33,6 +33,7 @@ Route::group(['namespace'=>'Admin','prefix'=>'m','middleware'=>'auth'],function 
 
 //首页
 Route::get('/','HomeController@index');
+Route::get('/test','HomeController@test');
 
 
-Route::group();
+//Route::group();

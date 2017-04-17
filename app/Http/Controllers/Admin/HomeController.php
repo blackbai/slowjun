@@ -8,7 +8,12 @@ use App\Http\Controllers\Controller;
 class HomeController extends Controller
 {
     public function index(){
-        echo 1;die();
-        return view('admin.index');
+//        echo 1;die();
+        return view('home.index');
+    }
+
+
+    public function test(){
+        return view('home.index');
     }
 }
