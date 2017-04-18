@@ -26,8 +26,8 @@ Route::group(['namespace'=>'Admin','middleware'=>'auth'],function (){
     Route::get('/index','HomeController@index');
 
     //系统设置
-    Route::post('/setting','SettingController@update');
-    Route::get('/setting','SettingController@index');
+    Route::post('/setting','SettingController@update')->name('admin.setting');
+    Route::get('/setting','SettingController@index')->name('admin.setting');
 
     //用户
     Route::get('/users','UserController@index');
@@ -35,14 +35,15 @@ Route::group(['namespace'=>'Admin','middleware'=>'auth'],function (){
     Route::put('/user/{id}','UserController@edit');
     Route::delete('/user/{id}','UserController@delete');
 
-
+    //文章
+    Route::get('/articles','ArticleController@index')->name('article.list');
 });
 
 
 //文章接口
-Route::get('/article/create','Admin\ArticleController@create')->name('article.create');
-Route::post('/article','Admin\ArticleController@store')->name('article.store');
-Route::get('/article/{id}/edit','Admin\ArticleController@edit')->name('article.edit');
-Route::post('/article/{id}','Admin\ArticleController@update')->name('article.update');
+//Route::get('/article/create','Admin\ArticleController@create')->name('article.create');
+//Route::post('/article','Admin\ArticleController@store')->name('article.store');
+//Route::get('/article/{id}/edit','Admin\ArticleController@edit')->name('article.edit');
+//Route::post('/article/{id}','Admin\ArticleController@update')->name('article.update');
 
 //Route::get('/test','Auth\LoginController');

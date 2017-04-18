@@ -267,6 +267,7 @@ strong {
 .container-padding {
   padding-left: 20px;
   padding-right: 20px;
+  height: 820px;
 }
 .container-no-padding {
   padding: 0px;
@@ -3121,7 +3122,7 @@ div[data-role="editor-toolbar"] {
   color: #3D464D;
 }
 .panel-title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: '微软雅黑','Montserrat', sans-serif;
   color: #58666e;
   font-size: 13px;
   font-weight: bold;

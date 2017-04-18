@@ -14,7 +14,7 @@ class SettingController extends Controller
      */
     public function index(){
         $setting = Setting::find(1);
-        return view('admin.setting',compact('setting',$setting));
+        return view('admin.setting',compact('setting'));
     }
 
     /**
@@ -23,9 +23,9 @@ class SettingController extends Controller
      * @param $id
      * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
-    public function update(Request $request,$id){
+    public function update(Request $request){
         $data = $request->all();
-        $setting = Setting::find($id);
+        $setting = Setting::find(1);
         $setting->update($data);
         return view('admin.setting',compact('setting',$setting));
     }

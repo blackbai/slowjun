@@ -95,8 +95,8 @@
     <ul class="sidebar-panel nav">
         <li class="sidetitle">MAIN</li>
         <li><a href="index.html"><span class="icon color5"><i class="fa fa-home"></i></span>Dashboard<span class="label label-default">2</span></a></li>
-        <li><a href="mailbox.html"><span class="icon color6"><i class="fa fa-cogs"></i></span>站点设置<span class="label label-default">19</span></a></li>
-        <li><a href="mailbox.html"><span class="icon color6"><i class="fa fa-graduation-cap"></i></span>会员管理<span class="label label-default">19</span></a></li>
+        <li><a href="{{ route('admin.setting') }}"><span class="icon color6"><i class="fa fa-cogs"></i></span>站点设置<span class="label label-default">19</span></a></li>
+        <li><a href="{{ route('article.list') }}"><span class="icon color6"><i class="fa fa-graduation-cap"></i></span>会员管理<span class="label label-default">19</span></a></li>
         <li><a href="mailbox.html"><span class="icon color6"><i class="fa fa-keyboard-o"></i></span>文章管理<span class="label label-default">19</span></a></li>
         <li><a href="mailbox.html"><span class="icon color6"><i class="fa fa-codepen"></i></span>分类管理<span class="label label-default">19</span></a></li>
         <li><a href="mailbox.html"><span class="icon color6"><i class="fa fa-envelope-o"></i></span>标签管理<span class="label label-default">19</span></a></li>
@@ -108,6 +108,20 @@
 
 
 @yield('content')
+
+<!-- Start Footer -->
+<div class="row footer">
+    <div class="col-md-6 text-left">
+        Copyright &copy; 2016.Company name All rights reserved.<a target="_blank" href="http://sc.chinaz.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a>
+    </div>
+    <div class="col-md-6 text-right">
+        Design and Developed by 站长素材
+    </div>
+</div>
+<!-- End Footer -->
+
+
+</div>
 
 <div role="tabpanel" class="sidepanel">
 
