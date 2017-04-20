@@ -39,7 +39,9 @@ Auth::routes();
     Route::get('/articles','ArticleController@index')->name('article.list');
 //});
 
-
+Route::get('/test',function(){
+    echo 1;
+});
 Route::get('/','HomeController@index');
 //文章接口
 //Route::get('/article/create','Admin\ArticleController@create')->name('article.create');
