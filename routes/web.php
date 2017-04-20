@@ -40,6 +40,7 @@ Route::group(['namespace'=>'Admin','middleware'=>'auth'],function (){
 });
 
 
+Route::get('/','HomeController@index');
 //文章接口
 //Route::get('/article/create','Admin\ArticleController@create')->name('article.create');
 //Route::post('/article','Admin\ArticleController@store')->name('article.store');

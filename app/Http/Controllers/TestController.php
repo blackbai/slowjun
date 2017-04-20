@@ -5,6 +5,8 @@ use App\Users;
 use Illuminate\Support\Facades\Redis;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
+use Qiniu\Auth;
+use Qiniu\Storage\UploadManager;
 class TestController extends Controller{
 
     public function index(){
