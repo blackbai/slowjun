@@ -21,9 +21,9 @@ Auth::routes();
  * @middleware auth
  * @desc 后台相关接口
  */
-//Route::group(['namespace'=>'Admin','middleware'=>'auth'],function (){
+Route::group(['namespace'=>'Admin','middleware'=>'auth'],function (){
 
-    Route::get('/index','Admin\HomeController@index');
+    Route::get('/index','HomeController@index');
 
     //系统设置
     Route::post('/setting','SettingController@update')->name('admin.setting');
@@ -37,11 +37,9 @@ Auth::routes();
 
     //文章
     Route::get('/articles','ArticleController@index')->name('article.list');
-//});
-
-Route::get('/test',function(){
-    echo 1;
 });
+
+
 Route::get('/','HomeController@index');
 //文章接口
 //Route::get('/article/create','Admin\ArticleController@create')->name('article.create');
